@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generator Skill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kotak-mesin">
+        <h1>Generator Skill Unik</h1>
+
+        <p>
+            Masukkan namamu untuk
+            melihat skill tersembunyimu
+        </p>
+
+        <input
+            type="text"
+            id="namaInput"
+            placeholder="Ketik namamu...."
+        >
+
+        <button onclick="cekSkill()">
+            Cek Sekarang!
+        </button>
+
+        <h2 id="hasilSkill">
+            Skill belum terdeteksi...
+        </h2>
+        <img
+        id="fotoSkill"
+        src="https://placehold.co/200x200?text=?"
+        width="400"
+        >
+    </div>
+
+    <script>
+        function cekSkill() {
+            let nama = document.getElementById("namaInput").value;
+
+            let daftarSkill = [
+                "Tendangan Jumpa Fans",
+                "Pace Vario",
+                "Radar Wifi",
+                "Aroma Bensin",
+                "Rayap Besi"
+            ];
+
+            let daftarGambar =[
+                "https://pbs.twimg.com/media/HOznZmRbIAEwV7k?format=webp&name=large",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrzvUybbHAYM6NS4vQ3LkwP9ZDwe6g2n7GLMoUlt_S3uPst_pVIc6LBNd1&s=10",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROFi3h6LZ3TTeb8f2DiqVEKGOQ-8xRE8pTwUCIFHU-l-Rl6GidVSNkrHkH&s=10",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGNEJD1eiDI5y5AxbyDLv2UOsZ7qeppWqroD9_RV_GNxJ0vpnoWzuMTQ&s=10",
+                "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQrFyL9gtluQkMxOpLna9W2CiKg1ACJDdm3KEik4huuu6Te71RBpg4rwc3o8sztVvFyy7Q3MIFVTVGAqwhyphenhyphenmPhJpJQnpzACD3B9eSKY7GvBRPpEOxmiavAXh8goAa4OHZy4D3yF3yIK3_Qz4AXWrMKqyoPa8Qgni7xtjc6_RnsUHpXc5v_-4Cn3duZ6OU/w640-h472/Apa%20itu%20Rayap%20Besi%20di%20Medan.jpg",
+            ];
+
+            if (nama.trim() === "") {
+                document.getElementById("hasilSkill").innerText =
+                    "Masukkan namamu dulu!";
+                return;
+            }
+
+            let acak = Math.floor(Math.random() * daftarSkill.length);
+            let skillPilihan = daftarSkill[acak];
+
+            let gambarPilihan = daftarGambar[acak];
+
+            document.getElementById("hasilSkill").innerText =
+                nama + ", skill unikmu: " + skillPilihan;
+
+                document.getElementById("fotoSkill").src = gambarPilihan;
+        }
+
+    
+    </script>
+</body>
+</html>

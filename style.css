@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(166, 211, 251);
+    color: rgb(0, 0, 0);
+    font-family: arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.kotak-mesin{
+    background-color:aliceblue;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+input{
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: rgb(249, 218, 133);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+#hasilSkill{
+    color: black;
+    margin-top: 20px;
+}
